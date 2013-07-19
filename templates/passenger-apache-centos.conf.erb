@@ -20,7 +20,7 @@ LoadModule passenger_module <%= @gempath %>/passenger-<%= @version %>/ext/apache
 <% if @rails_env -%>
   RailsEnv <%= @rails_env %>
 <% end -%>
-<% if @rails_env -%>
+<% if @rack_env -%>
   RackEnv <%= @rack_env %>
 <% end -%>
 
