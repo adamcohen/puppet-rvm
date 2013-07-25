@@ -13,6 +13,7 @@ class rvm::passenger::apache::centos::post(
 ) {
   exec {
     'passenger-install-apache2-module':
+      environment => ["rvm_prefix=${rvm_prefix}", "rvm_path=${rvm_prefix}/rvm", "rvm_bin_path=${binpath}", "HOME=/home/vagrant"], 
       command   => "${binpath}rvm ${ruby_version} exec passenger-install-apache2-module -a",
       creates   => "${gempath}/passenger-${version}/${compiled_module_fn}",
       logoutput => 'on_failure',
