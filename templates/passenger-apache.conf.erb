@@ -12,4 +12,12 @@
   PassengerMinInstances <%= @mininstances %>
   PassengerSpawnMethod <%= @spawnmethod %>
 <% end %>
+
+<% if @rails_env -%>
+  RailsEnv <%= @rails_env %>
+<% end -%>
+<% if @rails_env -%>
+  RackEnv <%= @rack_env %>
+<% end -%>
+
 </IfModule>
